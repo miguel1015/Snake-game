@@ -1,13 +1,88 @@
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    background: fixed;
+}
+body{
+    background-repeat: no-repeat;
+    background-image: url(https://cdn.wallpapersafari.com/66/44/zldaLS.jpg);
+    background-position: center;
+    padding: auto;
+    background-size: cover;
+    background-color: bisque;
+}
+.grid {
+    width: 600px;
+    height: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    float: left;
+    border-style: solid;
+    border-radius: 50px;
+    background: rgb(10, 10, 10);
 }
 
-body{
-    background-color: rgb(236, 228, 228);
+.grid div {
+    width: 20px;
+    height: 20px;
 }
+
+.content {
+    float: left;
+    width: 30%;
+    padding: 50px;
+}
+
+.snake {
+    background-color: rgb(242, 242, 248);
+    border-radius: 10px;
+}
+
+.apple {
+    background-color: rgb(16, 121, 241);
+    border-radius: 10px;
+}
+
+.apple2 {
+    background-color: red;
+    border-radius: 10px;
+}
+
+button {
+    background: rgb(3, 83, 3);
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+}
+
+button:hover {
+    cursor: pointer;
+    background: rgb(36, 49, 36);
+}
+
+.score,
+.live {
+    display: block;
+    margin: 10px;
+    padding: 20px;
+    font-size: 26px;
+}
+
+.score {
+    color: rgb(8, 132, 173);
+    background-color: beige;
+    width: 95px;
+}
+
+.live {
+    color: rgb(177, 19, 19);
+    background-color: aliceblue;
+    width: 95px;
+}
+
+
+
 
 h1{
-    color: steelblue
+    background-color: aliceblue;
+    width: 300px;
+    font-size: 700%;
 }

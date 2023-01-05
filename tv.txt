@@ -1,0 +1,123 @@
+var estadoTv = "apagada";
+var pasarCanal ="pasarCanales";
+var sonidoTv = document.getElementById("blender-sound");
+var botonTv = document.getElementById("blender-button-sound");
+var Tv = document.getElementById("blender");
+
+
+function controlarTv(){
+    if (estadoTv == "apagada"){
+        estadoTv = "encendida";
+        botonCanal();
+        Tv.classList.add("alf");
+    }
+    else if (pasarCanal == "pasarCanales") {
+         estadoTv = "encendida"
+         botonCanal();
+         Tv.classList.add("sabrina")
+     }
+    else {
+        estadoTv = "apagada"
+        botonCanal();
+        Tv.classList.remove("alf")
+    }
+
+}
+
+
+
+
+
+function botonCanal(){
+    if (sonidoTv.paused){
+        botonTv.play();
+        sonidoTv.play();
+    }else {
+        botonTv.play();
+        sonidoTv.pause();
+        sonidoTv.currentime = 0;
+    }
+}
+
+
+
+css-------------------____---___---_____------------
+
+
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #000
+}
+
+.blender{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 389px;
+    height: 400px;
+    /* background-color: red; */
+    background-image: url(./img/tv\ encendiendo.gif);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.blender.alf{
+    background-image: url(./img/tv\ alf.gif);    
+}
+
+.blender.sabrina{
+    background-image: url(./img/tv\ sabrina.gif);
+            
+}
+
+
+
+
+.blender-button{
+    margin: -10px 10px;
+    width: 1000px;
+    height: 1000px;
+    /* background-color: blue; */
+} 
+
+
+
+
+
+
+
+HTML ---------_________--------____________-------
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./estilos.css">
+    
+</head>
+<body>
+    
+<div class="container">
+    <div id="blender" class="blender">
+        <div id="blende-button" class="blender-button" onclick="controlarTv()"</div>
+            <div id="blonde" class="blonde"></div>
+    </div>
+    <audio id="blender-button-sound" src="" type="audio/mpeg"></audio>
+    <audio id="blender-sound" src="" type="audio/mpeg" loop></audio>
+</div>
+<script src="./java.js"></script>
+</body>
+</html>
